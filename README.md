@@ -13,11 +13,14 @@ It's possible your IIS server may already have steps 1 and 2 and 4 mostly done a
     * [Enable reverse proxy in "Application Request Routing" for your site](https://weblogs.asp.net/owscott/creating-a-reverse-proxy-with-url-rewrite-for-iis)
 3. restart IIS entirely
 4. create a file (if it doesn't already exist) named `web.config` and put it in the root of the directory serving your website
-5. modify [web.config](./web.config)
+5. add a server variable for `HTTP_X_PRERENDER_TOKEN` (see screenshot below)
+6. modify [web.config](./web.config)
     * add your prerender.cloud API token
     * hardcode the protocol in the `url` attr of the `<action type="Rewrite" />` tag to be (http or https) for your site
 
-![image](https://user-images.githubusercontent.com/16573/31325005-3c316b24-ac6d-11e7-99e5-5f73e4bc15d4.png)
+![image](https://user-images.githubusercontent.com/22159102/51094611-89651f00-177c-11e9-820c-a9fc22c045fa.png)
 
 
-Inspired from https://gist.github.com/blowsie/04c183c62a432f6450c9
+![image](https://user-images.githubusercontent.com/22159102/51094580-4e62eb80-177c-11e9-9be5-c7dbf906ade3.png)
+
+
