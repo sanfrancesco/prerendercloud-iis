@@ -1,8 +1,8 @@
-![image](https://cloud.githubusercontent.com/assets/22159102/21554484/9d542f5a-cdc4-11e6-8c4c-7730a9e9e2d1.png)
-
 # prerendercloud-iis
 
-IIS web.config for [https://www.prerender.cloud/](https://www.prerender.cloud/) for **prerendering** (server-side rendering) webpages.
+<img align="right" src="https://cloud.githubusercontent.com/assets/22159102/21554484/9d542f5a-cdc4-11e6-8c4c-7730a9e9e2d1.png">
+
+IIS web.config for pre-rendering JavaScript single page apps with [Headless-Render-API.com](https://headless-render-api.com) (formerly named prerender.cloud from 2016 - 2022)
 
 ## Usage
 
@@ -15,7 +15,7 @@ It's possible your IIS server may already have steps 1 and 2 and 4 mostly done a
 4. create a file (if it doesn't already exist) named `web.config` and put it in the root of the directory serving your website
 5. add a server variable for `HTTP_X_PRERENDER_TOKEN` (see screenshot below)
 6. modify [web.config](./web.config)
-    * add your prerender.cloud API token
+    * add your Headless-Render-API.com API token
     * hardcode the protocol in the `url` attr of the `<action type="Rewrite" />` tag to be (http or https) for your site
 
 ![image](https://user-images.githubusercontent.com/22159102/51094611-89651f00-177c-11e9-820c-a9fc22c045fa.png)
